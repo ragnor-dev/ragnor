@@ -21,7 +21,7 @@ jobs:
           python-version: "3.11"
 
       - name: Generate version files
-        run: python3 @scripts/merge_specs_v1.py
+        run: python3 './@scripts/merge_specs_v1.py'
 
       - name: Verify generated files are committed
         run: git diff --exit-code -- versions/
