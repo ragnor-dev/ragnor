@@ -1,0 +1,42 @@
+# ragnor.dev
+
+> A spec-as-code framework for teams that build with AI. Puts a structured,
+> versioned specification layer inside your Git repository — readable by
+> both humans and AI agents.
+
+## Repository mode
+
+This repository is the ragnor.dev framework source repository (meta-level).
+In this repo, canonical framework files are local under `framework/v1/`.
+Product repositories that adopt ragnor.dev use `@specs/` as the canonical
+specification layer.
+
+## Canonical local files (this repo)
+
+- `AGENTS.md`
+- `framework/v1/00_overview.md`
+- `framework/v1/50_version-operations.md`
+- `framework/v1/30_module-bootstrap.md`
+- `framework/v1/60_todo-management.md`
+- `framework/v1/40_authoring-guidelines.md`
+- `framework/v1/01_glossary.md`
+- `framework/v1/commands/`
+- `framework/v1/prompts/`
+
+## Framework
+
+- [Overview](framework/v1/00_overview.md): Core concepts, versioning model, immutability rules
+- [Version Operations](framework/v1/50_version-operations.md): All allowed operations and state transitions
+- [Module Bootstrap](framework/v1/30_module-bootstrap.md): How to create a new module from scratch
+- [Todo Management](framework/v1/60_todo-management.md): todo.md format, ID rules, lifecycle
+- [Authoring Guidelines](framework/v1/40_authoring-guidelines.md): What content belongs in each artefact
+- [Glossary](framework/v1/01_glossary.md): Framework terminology
+
+## Quick reference
+
+- [AGENTS.md](AGENTS.md): Rules for AI agents — read this first
+- [Full framework (single file)](versions/v1.md): Entire framework v1 concatenated for AI consumption
+
+## Optional
+
+- [GitHub repository](https://github.com/topala-dev/ragnor.dev): Source
