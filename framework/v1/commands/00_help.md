@@ -25,6 +25,7 @@ ragnor.dev help <command>
 | `status` | Show current spec status across all modules |
 | `adr` | Create a new ADR for a module version |
 | `version` | Bump a module to a new version |
+| `update-check` | Check for a newer framework version |
 
 ## How to invoke
 

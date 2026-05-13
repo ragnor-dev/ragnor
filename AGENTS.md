@@ -147,6 +147,7 @@ Invoke them by name in any conversation:
 | `ragnor.dev status` | Show spec status across all modules |
 | `ragnor.dev adr <module>@<version> "<title>"` | Create a new ADR |
 | `ragnor.dev version <module>@<version>` | Bump to a new module version |
+| `ragnor.dev update-check` | Check for a newer framework version |
 
 Command definitions:
 - framework-source repo: `framework/v1/commands/`
@@ -175,7 +176,7 @@ Before executing any command, verify:
 1. Does `@specs/` exist at the repository root?
 2. Does the framework path exist with framework files?
    - framework-source repo: `framework/v1/`
-   - adopter repo: `@specs/framework/v1/`
+   - adopter repo: `@specs/framework/v1.md`
 3. Does at least one module version exist under `@specs/modules/`?
 4. Does `@specs/system/system@v1/` exist?
 
@@ -185,9 +186,8 @@ If any check fails:
 - Suggest running `ragnor.dev bootstrap`
 - Do not proceed with any other command
 
-See `framework/v1/OB_00_onboarding-overview.md` for onboarding paths in this
-repository, or `@specs/framework/v1/OB_00_onboarding-overview.md` in adopter
-repositories.
+Once the gate passes, run `ragnor.dev update-check` before proceeding.
+See `framework/v1/commands/08_update-check.md` for update-check rules.
 
 ---
 

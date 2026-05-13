@@ -88,14 +88,11 @@ Once released, versions are immutable. New intent requires a new version.
 
 If you are adopting ragnor.dev in a software repository:
 
-1. Add `@specs/` to your repository root
-2. Copy the framework files from `framework/v1/` (from this framework source repo) into `@specs/framework/v1/` in your product repo
-3. Create your first module: `@specs/modules/<your-module>/<your-module>@v1/`
-4. Add `module-spec.md`, `todo.md`, and an empty `adr/` directory
-5. Point your AI assistant at `@specs/` and start building with grounded context
+1. Copy [`versions/v1.md`](versions/v1.md) from this repo into `@specs/framework/v1.md` in your product repo
+2. Point your AI assistant at `@specs/framework/v1.md`
+3. Tell your AI to run `ragnor.dev bootstrap` — it will create the full `@specs/` structure and guide you through your first module
 
-See [`framework/v1/30_module-bootstrap.md`](framework/v1/30_module-bootstrap.md)
-for the full bootstrap process.
+The entire onboarding process is AI-assisted. The framework file gives your agent everything it needs.
 
 If you are working in the ragnor.dev framework source repository itself,
 `@specs/modules/` and `@specs/system/` may be intentionally absent.
@@ -135,7 +132,7 @@ A single-file version of the full framework is available at [`versions/v1.md`](v
 | [`framework/v1/OB_10_onboarding-greenfield.md`](framework/v1/OB_10_onboarding-greenfield.md) | Greenfield onboarding path |
 | [`framework/v1/OB_20_onboarding-brownfield.md`](framework/v1/OB_20_onboarding-brownfield.md) | Brownfield onboarding path |
 | [`framework/v1/OB_30_onboarding-external.md`](framework/v1/OB_30_onboarding-external.md) | External onboarding path |
-| [`framework/v1/commands/`](framework/v1/commands/) | Command definitions (help, bootstrap, intake, drift, validate, status, adr, version) |
+| [`framework/v1/commands/`](framework/v1/commands/) | Command definitions (help, bootstrap, intake, drift, validate, status, adr, version, update-check) |
 | [`framework/v1/prompts/`](framework/v1/prompts/) | Prompt templates for each command |
 
 ---

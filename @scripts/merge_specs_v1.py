@@ -5,6 +5,7 @@ framework/v*/ and writes them to versions/<version>.md.
 """
 
 from pathlib import Path
+import os
 import re
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -74,7 +75,16 @@ def merge_one(version_root: Path):
     output_file = OUTPUT_DIR / f"{version_root.name}.md"
 
     with open(output_file, "w", encoding="utf-8") as out:
+        build_number = os.environ.get("BUILD_NUMBER", "dev")
+        major = parse_version_dir_name(version_root.name)[0]
+        framework_version = f"v{major}.{build_number}"
+        latest_url = f"https://raw.githubusercontent.com/ragnor-dev/ragnor/main/versions/{version_root.name}.md"
+
         out.write("# ragnor.dev Specs — Single File Reference\n\n")
+        out.write(
+            f"framework_version: {framework_version}\n"
+            f"latest_url: {latest_url}\n\n"
+        )
         out.write(
             "This file is a concatenation of framework Markdown files under "
             f"`framework/{version_root.name}/`.\n"

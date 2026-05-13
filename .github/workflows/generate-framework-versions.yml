@@ -22,6 +22,8 @@ jobs:
 
       - name: Generate version files
         run: python3 './@scripts/merge_specs_v1.py'
+        env:
+          BUILD_NUMBER: ${{ github.run_number }}
 
       - name: Verify generated files are committed
         run: git diff --exit-code -- versions/
