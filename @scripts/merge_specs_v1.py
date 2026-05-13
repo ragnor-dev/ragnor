@@ -76,8 +76,12 @@ def merge_one(version_root: Path):
 
     with open(output_file, "w", encoding="utf-8") as out:
         build_number = os.environ.get("BUILD_NUMBER", "dev")
+        release_tag = os.environ.get("RELEASE_TAG", "")
         major = parse_version_dir_name(version_root.name)[0]
-        framework_version = f"v{major}.{build_number}"
+        if release_tag:
+            framework_version = f"{release_tag}.{build_number}"
+        else:
+            framework_version = f"v{major}.{build_number}"
         latest_url = f"https://raw.githubusercontent.com/ragnor-dev/ragnor/main/versions/{version_root.name}.md"
 
         out.write("# ragnor.dev Specs — Single File Reference\n\n")
