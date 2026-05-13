@@ -1,0 +1,18 @@
+name: Validate Release Tag
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  validate-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check tag prefix
+        run: |
+          TAG="${{ github.ref_name }}"
+          if [[ ! "$TAG" =~ ^v ]]; then
+            echo "ERROR: Release tag '$TAG' must start with 'v' (e.g. v1.0, v1.0-beta.1)"
+            exit 1
+          fi
+          echo "Tag '$TAG' is valid."
