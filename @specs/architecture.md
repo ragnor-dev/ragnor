@@ -50,5 +50,5 @@ invariant of the framework. It enables:
 The spec layer is the source. Downstream targets (docs sites, wikis,
 Confluence, AI context files) are derived views generated from `@specs/`.
 
-The `merge_specs.py` script generates `v1.md` — a single-file
+The `@scripts/merge_specs_v1.py` script generates `versions/v1.md` — a single-file
 concatenation of the framework for AI consumption.

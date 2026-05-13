@@ -109,8 +109,8 @@ rules written as an AI-consumable reference.
 
 See [`llms.txt`](llms.txt) for the AI crawler entry point.
 
-A single-file version of the full framework is available at `v1.md`
-(generated — run `python merge_specs_v1.py` to produce it).
+A single-file version of the full framework is available at [`versions/v1.md`](versions/v1.md)
+(generated — run `python @scripts/merge_specs_v1.py` to produce it).
 
 ---
 
@@ -119,10 +119,25 @@ A single-file version of the full framework is available at `v1.md`
 | File | Purpose |
 |------|---------|
 | [`framework/v1/00_overview.md`](framework/v1/00_overview.md) | Core concepts and model |
-| [`framework/v1/50_version-operations.md`](framework/v1/50_version-operations.md) | Versioning rules and immutability |
+| [`framework/v1/01_glossary.md`](framework/v1/01_glossary.md) | Framework terminology |
+| [`framework/v1/02_specs-meta.md`](framework/v1/02_specs-meta.md) | Repository layout and conventions |
+| [`framework/v1/10_delivery-model.md`](framework/v1/10_delivery-model.md) | Delivery model and workflow |
+| [`framework/v1/20_idea-to-spec.md`](framework/v1/20_idea-to-spec.md) | Idea intake and spec creation |
 | [`framework/v1/30_module-bootstrap.md`](framework/v1/30_module-bootstrap.md) | Creating a new module |
-| [`framework/v1/60_todo-management.md`](framework/v1/60_todo-management.md) | todo.md format and lifecycle |
 | [`framework/v1/40_authoring-guidelines.md`](framework/v1/40_authoring-guidelines.md) | What content goes where |
+| [`framework/v1/50_version-operations.md`](framework/v1/50_version-operations.md) | Versioning rules and immutability |
+| [`framework/v1/60_todo-management.md`](framework/v1/60_todo-management.md) | todo.md format and lifecycle |
+| [`framework/v1/70_ai-execution-rules.md`](framework/v1/70_ai-execution-rules.md) | Rules for AI agent execution |
+| [`framework/v1/80_drift-detection.md`](framework/v1/80_drift-detection.md) | Detecting spec/code drift |
+| [`framework/v1/90_roadmap.md`](framework/v1/90_roadmap.md) | Framework roadmap |
+| [`framework/v1/95_git-integration.md`](framework/v1/95_git-integration.md) | Git workflow integration |
+| [`framework/v1/OB_00_onboarding-overview.md`](framework/v1/OB_00_onboarding-overview.md) | Onboarding overview |
+| [`framework/v1/OB_10_onboarding-greenfield.md`](framework/v1/OB_10_onboarding-greenfield.md) | Greenfield onboarding path |
+| [`framework/v1/OB_20_onboarding-brownfield.md`](framework/v1/OB_20_onboarding-brownfield.md) | Brownfield onboarding path |
+| [`framework/v1/OB_30_onboarding-external.md`](framework/v1/OB_30_onboarding-external.md) | External onboarding path |
+| [`framework/v1/commands/`](framework/v1/commands/) | Command definitions (help, bootstrap, intake, drift, validate, status, adr, version) |
+| [`framework/v1/prompts/`](framework/v1/prompts/) | Prompt templates for each command |
+
 ---
 
 ## Status
